@@ -1,6 +1,6 @@
 # Kubernetes CICD Tutorial
 
-This repo contains all the code needed to follow along with our **[YouTube Tutorial](https://youtu.be/GlhK7mz5IJo)** or **[Written Article](https://rayanslim.com/course/kubernetes-cicd-course/introduction)**.
+This repo contains all the code needed to follow along with our **[YouTube Tutorial](https://youtu.be/GlhK7mz5IJo)** or **[Written Article](https://rslim087a.github.io/rayanslim/lesson.html?course=kubernetes-cicd-course&lesson=introduction)**.
 
 ## Prerequisites
 
