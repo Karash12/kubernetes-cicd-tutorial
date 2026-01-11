@@ -10,6 +10,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+        # STEP 1: Create a lowercase version of the repository name
+      - name: Lowercase the repo name
+        id: string
+        run: echo "REPO_LC=${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
+        
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
         with:
@@ -30,10 +36,12 @@ jobs:
         shell: bash
         env:
           GIT_TOKEN: ${{ secrets.GITOPS_PAT }}
-        run: |
+        run: |          
           # Configure git credential store
           git config --global credential.helper store
           echo "https://${GIT_TOKEN}:x-oauth-basic@github.com" > ~/.git-credentials
+
+          
           
           # Remove any existing gitops directory
           rm -rf gitops
